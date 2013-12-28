@@ -5,77 +5,106 @@ html {
 
 /* line 6, ../sass/page.scss */
 .wrapper {
+  max-width: 900px;
+  margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
+  display: none;
 }
-/* line 11, ../sass/page.scss */
+/* line 12, ../sass/page.scss */
 .wrapper > * {
   flex: 1 100%;
 }
-/* line 14, ../sass/page.scss */
+/* line 15, ../sass/page.scss */
 .wrapper .page-header {
   background: #FF6347;
   padding: 10px 0;
 }
-/* line 17, ../sass/page.scss */
+/* line 18, ../sass/page.scss */
 .wrapper .page-header h1 {
   text-align: center;
 }
-/* line 22, ../sass/page.scss */
+/* line 23, ../sass/page.scss */
 .wrapper .page-content {
   min-height: 200px;
   background: #00BFFF;
   padding: 10px;
   flex: 2 0px;
 }
-/* line 29, ../sass/page.scss */
+/* line 30, ../sass/page.scss */
 .wrapper .aside1, .wrapper .aside2 {
   background: #FF69B4;
   padding: 10px 0;
+  transition: min-height .7s;
 }
-/* line 32, ../sass/page.scss */
+/* line 34, ../sass/page.scss */
 .wrapper .aside1 p, .wrapper .aside2 p {
   font-weight: bold;
   text-align: center;
 }
-/* line 38, ../sass/page.scss */
+/* line 40, ../sass/page.scss */
 .wrapper .aside2 {
   background: #FFD700;
 }
-/* line 42, ../sass/page.scss */
+/* line 44, ../sass/page.scss */
 .wrapper .page-footer {
   background: #90EE90;
   padding: 10px 0;
 }
-/* line 45, ../sass/page.scss */
+/* line 47, ../sass/page.scss */
 .wrapper .page-footer p {
   font-weight: bold;
   text-align: center;
 }
+
 @media screen and (min-width: 800px) {
-  /* line 52, ../sass/page.scss */
-  .wrapper .aside1, .wrapper .aside2 {
+  /* line 56, ../sass/page.scss */
+  .aside1, .aside2 {
     flex: 1 auto;
     min-height: 200px;
   }
-  /* line 56, ../sass/page.scss */
-  .wrapper .page-header {
+
+  /* line 60, ../sass/page.scss */
+  .page-header {
     order: 1;
   }
-  /* line 59, ../sass/page.scss */
-  .wrapper .aside1 {
+
+  /* line 63, ../sass/page.scss */
+  .aside1 {
     order: 2;
   }
-  /* line 62, ../sass/page.scss */
-  .wrapper .page-content {
+
+  /* line 66, ../sass/page.scss */
+  .page-content {
     order: 3;
   }
-  /* line 65, ../sass/page.scss */
-  .wrapper .aside2 {
+
+  /* line 69, ../sass/page.scss */
+  .aside2 {
     order: 4;
   }
-  /* line 68, ../sass/page.scss */
-  .wrapper .page-footer {
+
+  /* line 72, ../sass/page.scss */
+  .page-footer {
     order: 5;
   }
+}
+/* line 81, ../sass/page.scss */
+.cover .pack-of-cards {
+  display: flex;
+  flex-flow: column wrap;
+  height: 380px;
+  max-width: 600px;
+  margin: 10px auto;
+  box-shadow: 1px 2px 2px #333, -1px 0 2px #333;
+}
+/* line 90, ../sass/page.scss */
+.cover .card {
+  background: #FF6347;
+  padding: 40px;
+  margin: 4px;
+}
+/* line 95, ../sass/page.scss */
+.cover .card:nth-child(even) {
+  background: #FF69B4;
 }
