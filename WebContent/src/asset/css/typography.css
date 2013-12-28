@@ -1,0 +1,39 @@
+/* line 12, ../scss/typography.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  font: 13px/1.5 arial, verdana;
+}
+
+/* line 15, ../scss/typography.scss */
+h1 {
+  font-size: 2.307em;
+  /* 30/13 */
+}
+
+/* line 18, ../scss/typography.scss */
+h2 {
+  font-size: 1.846em;
+  /* 24/13 */
+}
+
+/* line 21, ../scss/typography.scss */
+h3 {
+  font-size: 1.538em;
+  /* 20/13 */
+}
+
+/* line 24, ../scss/typography.scss */
+h4 {
+  font-size: 1.384em;
+  /* 18/13 */
+}
