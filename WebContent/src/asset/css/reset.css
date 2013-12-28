@@ -2,7 +2,7 @@
    v2.0b1 | 201101 
    NOTE: WORK IN PROGRESS
    USE WITH CAUTION AND TEST WITH ABANDON */
-/* line 17, ../scss/reset.scss */
+/* line 17, ../sass/reset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,28 +25,28 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-/* line 28, ../scss/reset.scss */
+/* line 28, ../sass/reset.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 31, ../scss/reset.scss */
+/* line 31, ../sass/reset.scss */
 body {
   line-height: 1;
 }
 
-/* line 34, ../scss/reset.scss */
+/* line 34, ../sass/reset.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 37, ../scss/reset.scss */
+/* line 37, ../sass/reset.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 41, ../scss/reset.scss */
+/* line 41, ../sass/reset.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
@@ -58,17 +58,17 @@ q:before, q:after {
 	outline: ?????;
 } */
 /* remember to highlight inserts somehow! */
-/* line 52, ../scss/reset.scss */
+/* line 52, ../sass/reset.scss */
 ins {
   text-decoration: none;
 }
 
-/* line 56, ../scss/reset.scss */
+/* line 56, ../sass/reset.scss */
 del {
   text-decoration: line-through;
 }
 
-/* line 60, ../scss/reset.scss */
+/* line 60, ../sass/reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;

@@ -1,0 +1,81 @@
+/* line 3, ../sass/page.scss */
+html {
+  font-size: 16px;
+}
+
+/* line 6, ../sass/page.scss */
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+/* line 11, ../sass/page.scss */
+.wrapper > * {
+  flex: 1 100%;
+}
+/* line 14, ../sass/page.scss */
+.wrapper .page-header {
+  background: #FF6347;
+  padding: 10px 0;
+}
+/* line 17, ../sass/page.scss */
+.wrapper .page-header h1 {
+  text-align: center;
+}
+/* line 22, ../sass/page.scss */
+.wrapper .page-content {
+  min-height: 200px;
+  background: #00BFFF;
+  padding: 10px;
+  flex: 2 0px;
+}
+/* line 29, ../sass/page.scss */
+.wrapper .aside1, .wrapper .aside2 {
+  background: #FF69B4;
+  padding: 10px 0;
+}
+/* line 32, ../sass/page.scss */
+.wrapper .aside1 p, .wrapper .aside2 p {
+  font-weight: bold;
+  text-align: center;
+}
+/* line 38, ../sass/page.scss */
+.wrapper .aside2 {
+  background: #FFD700;
+}
+/* line 42, ../sass/page.scss */
+.wrapper .page-footer {
+  background: #90EE90;
+  padding: 10px 0;
+}
+/* line 45, ../sass/page.scss */
+.wrapper .page-footer p {
+  font-weight: bold;
+  text-align: center;
+}
+@media screen and (min-width: 800px) {
+  /* line 52, ../sass/page.scss */
+  .wrapper .aside1, .wrapper .aside2 {
+    flex: 1 auto;
+    min-height: 200px;
+  }
+  /* line 56, ../sass/page.scss */
+  .wrapper .page-header {
+    order: 1;
+  }
+  /* line 59, ../sass/page.scss */
+  .wrapper .aside1 {
+    order: 2;
+  }
+  /* line 62, ../sass/page.scss */
+  .wrapper .page-content {
+    order: 3;
+  }
+  /* line 65, ../sass/page.scss */
+  .wrapper .aside2 {
+    order: 4;
+  }
+  /* line 68, ../sass/page.scss */
+  .wrapper .page-footer {
+    order: 5;
+  }
+}

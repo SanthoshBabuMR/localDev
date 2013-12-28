@@ -1,0 +1,4 @@
+/* line 1, ../sass/element.scss */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
