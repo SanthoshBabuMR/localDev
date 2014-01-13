@@ -1,0 +1,123 @@
+/* line 1, ../sass/page.scss */
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+/* line 4, ../sass/page.scss */
+.doc-wrap {
+  padding: 5px 10px;
+}
+
+/* line 11, ../sass/page.scss */
+.home .home,
+.snippets .snippets,
+.videos .videos,
+.hot-links .hot-links,
+.tech-gurus .tech-gurus {
+  background: rgba(0, 155, 0, 0.5);
+  color: #ffffff;
+}
+
+/* line 15, ../sass/page.scss */
+a {
+  display: inline-block;
+  padding: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  color: rgba(0, 155, 0, 0.8);
+  transition: all 0.3s;
+}
+/* line 23, ../sass/page.scss */
+a:hover, a:focus {
+  background: rgba(0, 155, 0, 0.5);
+  color: #ffffff;
+}
+
+/* line 30, ../sass/page.scss */
+img,
+iframe.video {
+  max-width: 100%;
+}
+
+/* line 34, ../sass/page.scss */
+nav li {
+  float: left;
+  padding: 4px;
+}
+/* line 38, ../sass/page.scss */
+nav:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* line 45, ../sass/page.scss */
+.grid-2 :after {
+  content: '';
+  display: block;
+  clear: both;
+}
+/* line 50, ../sass/page.scss */
+.grid-2 .col {
+  float: left;
+  width: 50%;
+  padding: 5px 10px;
+}
+/* line 54, ../sass/page.scss */
+.grid-2 .col:nth-child(2n):after {
+  clear: both;
+}
+
+/* line 60, ../sass/page.scss */
+.grid-3 :after {
+  content: '';
+  display: block;
+  clear: both;
+}
+/* line 65, ../sass/page.scss */
+.grid-3 .col {
+  float: left;
+  width: 33.3%;
+  padding: 5px 10px;
+}
+/* line 69, ../sass/page.scss */
+.grid-3 .col:nth-child(3n):after {
+  clear: both;
+}
+
+@media screen and (max-device-width: 320px), screen and (max-width: 320px) {
+  /* line 77, ../sass/page.scss */
+  h1 {
+    font-size: 1.5em;
+  }
+
+  /* line 80, ../sass/page.scss */
+  h2 {
+    font-size: 1.2em;
+  }
+
+  /* line 83, ../sass/page.scss */
+  .download-options {
+    font-size: .9em;
+  }
+  /* line 85, ../sass/page.scss */
+  .download-options a {
+    display: inline-block;
+    padding: 4px;
+  }
+
+  /* line 90, ../sass/page.scss */
+  .tech-gurus .grid-2 .col {
+    width: 100%;
+  }
+  /* line 92, ../sass/page.scss */
+  .tech-gurus .grid-2 .col:nth-child(2n+1) {
+    font-weight: bold;
+  }
+
+  /* line 97, ../sass/page.scss */
+  .videos .grid-3 .col a {
+    width: 100%;
+    text-align: center;
+  }
+}

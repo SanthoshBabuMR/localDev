@@ -1,0 +1,103 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+.doc-wrap {
+  padding: 5px 10px;
+}
+.home .home,
+.snippets .snippets,
+.videos .videos,
+.hot-links .hot-links,
+.tech-gurus .tech-gurus {
+  background: rgba(0,155,0,0.5);
+  color: #ffffff;
+}
+a {
+  display: inline-block;
+  padding: 4px;
+  border: 1px solid rgba(0,0,0,.2);
+  text-decoration: none;
+  color: rgba(0,155,0,0.8);
+  transition: all 0.3s;
+  &:hover,
+  &:focus{
+    background: rgba(0,155,0,0.5);
+    color: #ffffff;
+    
+  }        
+}
+img, 
+iframe.video{
+  max-width: 100%;
+}
+nav {
+ li {
+    float: left;
+    padding: 4px;
+  }
+  &:after{
+    content: '';
+    display: block;
+    clear:both;
+  }
+}
+.grid-2 {
+  :after {
+    content: '';
+    display: block;
+    clear:both;
+  }
+  .col {
+    float: left;
+    width: 50%;
+    padding: 5px 10px;
+    &:nth-child(2n):after {
+      clear:both;
+    }
+  }
+}
+.grid-3 {
+  :after {
+    content: '';
+    display: block;
+    clear:both;
+  }
+  .col {
+    float: left;
+    width: 33.3%;
+    padding: 5px 10px;
+    &:nth-child(3n):after {
+      clear:both;
+    }
+  }
+}
+
+@media screen and (max-device-width: 320px),
+screen and (max-width: 320px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+  .download-options {
+    font-size: .9em;
+    a {
+      display: inline-block;
+      padding: 4px;
+    }
+  }
+  .tech-gurus .grid-2 .col {
+    width: 100%;
+    &:nth-child(2n+1) {
+      font-weight: bold;
+    }
+  }
+  .videos .grid-3 .col {
+    a {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
