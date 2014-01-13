@@ -6,4 +6,9 @@ describe("Hello World", function() {
     expect(helloWorld()).toEqual("Hello World");  
   });
   
+  // specification
+  it("contains the word \"world\"", function() {
+    expect(helloWorld()).toContain("World");  
+  });
+  
 });
