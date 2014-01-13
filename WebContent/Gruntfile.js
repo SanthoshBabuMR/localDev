@@ -1,11 +1,14 @@
 module.exports = function(grunt) {
+	'use strict';
+	var page = grunt.file.readJSON('config/page.json');
+	var pageDir = page.srcPath;
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		connect: {
 			server: {
 				options: {
-					port: 9001,
+					port: 9345,
 					hostname: 'localhost',
 					base: '.',
 					keepalive: true,
@@ -15,28 +18,35 @@ module.exports = function(grunt) {
 		},
 
 		compass: {                  
-			compileBase: {                   
+			base: {                  
 				options: {              
 					sassDir: ['src/asset/sass/'],
 					cssDir: ['src/asset/css/']
 				}
 			},
-			compileDoc:  {                   
+			doc:  {                  
 				options: {              
-					sassDir: ['src/doc/*/sass/'],
-					cssDir: ['src/doc/*/css/']
+					sassDir: ['src/doc/'+pageDir+'/sass/'],
+					cssDir: ['src/doc/'+pageDir+'/css/']
 				}
 			},
 		},
 
 		watch: {
-			sass: {
-				files: ['src/asset/sass/*','src/doc/*/sass/*'],
-				tasks: ['compass'],
+			base: {
+				files: ['src/asset/sass/*'],
+				tasks: ['compass:base'],
 				options: {
 					livereload: true,
 				},
 			},
+			doc: {
+				files: ['src/doc/'+pageDir+'/sass/*'],
+				tasks: ['compass:doc'],
+				options: {
+					livereload: true,
+				},
+			}
 		},
 
 		jshint: {
