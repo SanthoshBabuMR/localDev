@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Understanding Jasmine</title>
+  <link rel="stylesheet" type="text/css" href="/src/asset/css/stand-alone-reset.css" />
+  <style>
+    .pack {
+      border-bottom: 1px solid #CCCCCC;
+      padding: 0 10px;
+    }
+		pre {
+			white-space: pre-wrap;
+		}
+  </style>
+</head>
+<body>
+  <section class="doc-wrap">
+  <!--  doc-wrap begin -->
+    <h1>Understanding Jasmine</h1>
+    
+    <h2>matchers</h2>
+    <article class="pack">
+    <!--  .pack begin -->
+      <h3>.toEqual</h3>
+      <p>
+        Compare if two expression(s) are equal, but doesn't care, if both expressions are of the same object.
+      </p>
+      <p>
+        Example:
+        <pre>
+          <code>
+it("expect a to be 1", function(){
+  var a = 1;
+  expect(a).toEqual(1);
+});          
+          </code>
+        </pre>
+      </p>
+    <!--  .pack end -->
+    </article>
+    
+    <article class="pack">
+    <!--  .pack begin -->
+      <h3>.toBe</h3>
+      <p>
+        Compare if two expression(s) are equal and of the same object. <code>.toBe</code> works similar to JavaScript's === operator. 
+        <br />
+        The example given below, will produce the opposite result, when used with <code>.toEqual</code> matcher.
+        <br /> <a href="http://www.youtube.com/watch?v=mh-hPzDfb_Q&feature=youtu.be">Check out: JavaScript Primitive Types vs Reference Types</a>
+      </p>
+      <p>
+        Example:
+        <pre>
+          <code>
+it("expect {} to not equal {}", function(){
+  expect({}).not.toBe({});
+});         
+          </code>
+        </pre>
+      </p>
+    <!--  .pack end -->    
+    </article>
+    
+    <article class="pack">
+    <!--  .pack begin -->
+      <h3>.toBeTruthy</h3>
+      <p>
+        test if an expression evaluates to <code>true</code>.
+      </p>
+      <p>
+        Example:
+        <pre>
+          <code>
+it("expect 1 to be true", function(){
+  expect(1).toBeTruthy();	
+});        
+          </code>
+        </pre>
+      </p>
+    <!--  .pack end -->    
+    </article>
+    
+    <article class="pack">
+    <!--  .pack begin -->
+      <h3>.toBeFalsy</h3>
+      <p>
+        test if an expression evaluates to <code>false</code>.
+      </p>
+      <p>
+        Example:
+        <pre>
+          <code>
+it("expect 0 to be false", function(){
+  expect(0).toBeFalsy();	
+});        
+          </code>
+        </pre>
+      </p>
+    <!--  .pack end -->    
+    </article>
+    
+    <article class="pack">
+    <!--  .pack begin -->
+      <h3>.not</h3>
+      <p>
+        used to negate the result of jasmine matchers
+      </p>
+      <p>
+        Example:
+        <pre>
+          <code>
+it("expect string '5' to not equal numeric 5", function() {
+  expect('5').not.toEqual(5);
+});        
+          </code>
+        </pre>
+      </p>
+    <!--  .pack end -->    
+    </article>
+    
+    <article class="pack">
+    <!--  .pack begin -->
+      <h3>.toContain</h3>
+      <p>
+        Check if the expression contains a desired character or array item.
+      </p>
+      <p>
+        Example:
+        <pre>
+          <code>
+it("expect var arr = [1,2,3] to contain 3", function() {
+  var arr = [1,2,3];
+  expect(arr).toContain(3);
+});
+          </code>
+        </pre>
+      </p>
+    <!--  .pack end -->    
+    </article>
+    
+    <article class="pack">
+    <!--  .pack begin -->
+      <h3>.toBeDefined</h3>
+		  <p>
+			  test if a variable or function or expression is defined
+			  <br /> <a href="https://javascriptweblog.wordpress.com/2010/08/16/understanding-undefined-and-preventing-referenceerrors/">Check out: Understanding JavaScript's 'undefined'</a>
+		  </p>
+      <p>
+        Example:
+        <pre>
+          <code>
+it("expect fn to be defined", function() {
+  function fn() {};
+  expect(fn).toBeDefined();
+});
+          </code>
+        </pre>
+      </p>
+    <!--  .pack end -->  			
+    </article>
+    
+    <article class="pack">
+    <!--  .pack begin -->
+      <h3>.toBeUndefined</h3>
+			<p>
+			  test if a variable or function or expression is undefined
+			  <br /> <a href="https://javascriptweblog.wordpress.com/2010/08/16/understanding-undefined-and-preventing-referenceerrors/">Check out: Understanding JavaScript's 'undefined'</a>
+		  </p>
+      <p>
+        Example:
+        <pre>
+          <code>
+it("expect var a to be defined", function() {
+  var a;
+  expect(a).toBeUndefined();
+});
+          </code>
+        </pre>
+      </p>
+    <!--  .pack end -->    
+    </article>
+    
+    <article class="pack">
+    <!--  .pack begin -->
+      <h3>.toBeNull</h3>
+			<p>
+			  test if a variable or expression evaluates to null
+		  </p>
+      <p>
+        Example:
+        <pre>
+          <code>
+it("expect null to be null", function() {
+  expect(null).toBeNull();
+});
+          </code>
+        </pre>
+      </p>
+    <!--  .pack end -->    
+    </article>
+		
+		<article class="pack">
+    <!--  .pack begin -->
+      <h3>.toBeNaN</h3>
+			<p>
+			  test if a expression evaluates to NaN
+		  </p>
+      <p>
+        Example:
+        <pre>
+          <code>
+it("expect 5*'x' to be NaN", function() {
+  expect(5*'x').toBeNaN();
+});
+          </code>
+        </pre>
+      </p>
+    <!--  .pack end -->    
+    </article>
+    
+    <article class="pack">
+    <!--  .pack begin -->
+      <h3>.toBeGreaterThan</h3>
+			<p>
+			  test if a expression is greater than another expression or value
+		  </p>
+      <p>
+        Example:
+        <pre>
+          <code>
+it("expects 'var b = [1,2,3]' to be greater than 'var a = [1,2]'", function(){
+  var a = [1,2];
+	var b = [1,2,3];
+	expect(b).toBeGreaterThan(a);
+});
+          </code>
+        </pre>
+      </p>
+    <!--  .pack end -->    
+    </article>    
+		
+    <article class="pack">
+    <!--  .pack begin -->
+      <h3>.toBeLessThan</h3>
+			<p>
+			  test if a expression is lesser than another expression or value
+		  </p>
+      <p>
+        Example:
+        <pre>
+          <code>
+it("expects literal 'a' to be less than literal 'z'", function(){
+  expect('a').toBeLessThan('z');
+});
+          </code>
+        </pre>
+      </p>
+    <!--  .pack end -->    
+    </article>
+		
+		<article class="pack">
+    <!--  .pack begin -->
+      <h3>.toBeCloseTo</h3>
+			<p>
+			  allows you to check if a number is close to another number, given a certain amount of decimal precision as the second argument
+		  </p>
+      <p>
+        Example:
+        <pre>
+          <code>
+it("expect 48.542 to be close to 48.5", function(){
+  expect(48.542).toBeCloseTo(48.5,1)
+});
+          </code>
+        </pre>
+      </p>
+    <!--  .pack end -->    
+    </article>
+		
+		<article class="pack">
+    <!--  .pack begin -->
+      <h3>.toMatch</h3>
+			<p>
+			  match an expression against regular expression
+				<br /> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions?redirectlocale=en-US&redirectslug=JavaScript%2FGuide%2FRegular_Expressions">Check out: Regular Expressions</a>
+		  </p>
+      <p>
+        Example:
+        <pre>
+          <code>
+it("expect myname@email.com to match \w+@\w+\.\w+", function(){
+  expect("myname@email.com").toMatch(/\w+@\w+\.\w+/);
+});
+          </code>
+        </pre>
+      </p>
+    <!--  .pack end -->    
+    </article>
+		
+		<article class="pack">
+    <!--  .pack begin -->
+      <h3>.toThrow</h3>
+			<p>
+			  expect a function to throw an error
+		  </p>
+      <p>
+        Example:
+        <pre>
+          <code>
+it("expect function fn to throw an error", function() {
+  var fn = function(x){
+    if(x) {
+      throw new Error();
+    }			  
+  };
+  expect(fn.bind(null, true)).toThrow();
+});
+          </code>
+        </pre>
+      </p>
+    <!--  .pack end -->    
+    </article>
+   
+    <article class="pack">
+    <!--  .pack begin -->
+      <h3>Reference</h3>
+			<ul>
+				<li><a href="https://github.com/pivotal/jasmine/wiki">jasmine wiki</a></li>
+			  <li><a href="http://pivotal.github.io/jasmine/">jasmine 1.3 pivotal</a></li>
+			  <li><a href="http://net.tutsplus.com/tutorials/javascript-ajax/testing-your-javascript-with-jasmine/">Testing Your JavaScript with Jasmine</a></li>
+				<li><a href="http://www.youtube.com/watch?v=voDU2pQvZm8">15JavaScript Testing With Jasmine - AJAX and Workflow - Spies</a></li>
+			</ul>
+    <!--  .pack end -->    
+    </article>    
+  <!--  doc-wrap end -->  
+  </section>
+</body>
+</html>
