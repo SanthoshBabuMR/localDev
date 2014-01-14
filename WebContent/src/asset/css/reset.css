@@ -20,7 +20,7 @@ time, mark, audio, video {
   border: 0;
   outline: 0;
   font-size: 100%;
-  font: inherit;
+  font: 13px/1.5 arial, verdana;
   vertical-align: baseline;
 }
 
