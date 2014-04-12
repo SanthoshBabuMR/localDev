@@ -1,0 +1,6 @@
+CRUD
+- using express framework
+- setting up server
+- handling routes
+- serving json data
+- handling sessions
