@@ -1,0 +1,14 @@
+{
+  "name": "grunt-multiple-server",
+  "version": "0.0.0",
+  "description": "a simple grunt server module with multiple servers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "grunt-contrib-connect": "~0.7.1"
+  }
+}

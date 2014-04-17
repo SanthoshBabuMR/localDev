@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Web Server Using Grunt</title>
+	</head>
+	<body>
+		<div class="doc-wrap">
+			<h1>grunt-task-run</h1>
+			<p>The following code snippets have the same behaviour</p>
+<pre>
+grunt.registerTask( "default",  <strong>"<i>task-name</i>"</strong>; )
+</pre>
+<pre>
+grunt.registerTask( "default",  function() {
+	console.log("\nstarting server ...\n");
+	<strong>grunt.task.run( "<i>task-name</i>" )</strong>;
+}  );
+</pre>
+		</div>
+	</body>
+</html>
