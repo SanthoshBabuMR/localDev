@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>npm commands</title>
+    <link rel="stylesheet" type="text/css" href="/src/asset/css/stand-alone-reset.css" />
+    <style>
+      .pack {
+        border-bottom: 1px solid #CCCCCC;
+        padding: 0 10px;
+      }
+	  	pre {
+	  		white-space: pre-wrap;
+	  	}
+    </style>
+	</head>
+	<body>
+		<div class="doc-wrap">
+		<!--  doc-wrap begin -->
+			<h1>npm commands</h1>
+    
+			<h2>install a module</h2>
+			<article class="pack">
+			<!--  .pack begin -->
+				<h3>install a npm module</h3>
+<pre>
+npm install &lt;npm_module_name&gt;
+</pre>
+			<!--  .pack end -->
+			</article>
+
+			<article class="pack">
+			<!--  .pack begin -->
+				<h3>install and save module to <code>dependencies</code> list</h3>
+<pre>
+npm install &lt;npm_module_name&gt; --save
+</pre>
+			<!--  .pack end -->
+			</article>
+			
+			<article class="pack">
+			<!--  .pack begin -->
+				<h3>install and save module to <code>devDependencies</code> list</h3>
+<pre>
+npm install &lt;npm_module_name&gt; --save-dev
+</pre>
+			<!--  .pack end -->
+			</article>
+			
+			<article class="pack">
+			<!--  .pack begin -->
+				<h3>install and save module to <code>optionalDependencies</code> list</h3>
+<pre>
+npm install &lt;npm_module_name&gt; --save-optional
+</pre>
+			<!--  .pack end -->
+			</article>
+			
+			<h2>uninstall a module</h2>
+			<article class="pack">
+			<!--  .pack begin -->
+				<h3>uninstall a npm module</h3>
+<pre>
+npm uninstall &lt;npm_module_name&gt;
+</pre>
+			<!--  .pack end -->
+			</article>
+
+			<article class="pack">
+			<!--  .pack begin -->
+				<h3>uninstall module from <code>dependencies</code> and update package.json</h3>
+<pre>
+npm uninstall &lt;npm_module_name&gt; --save
+</pre>
+			<!--  .pack end -->
+			</article>
+			
+			<article class="pack">
+			<!--  .pack begin -->
+				<h3>uninstall module from <code>devDependencies</code> and update package.json</h3>
+<pre>
+npm uninstall &lt;npm_module_name&gt; --save-dev
+</pre>
+			<!--  .pack end -->
+			</article>
+			
+			<article class="pack">
+			<!--  .pack begin -->
+				<h3>uninstall module from <code>optionalDependencies</code> and update package.json</h3>
+<pre>
+npm uninstall &lt;npm_module_name&gt; --save-optional
+</pre>
+			<!--  .pack end -->
+			</article>
+			
+			<h2>list module</h2>
+			<article class="pack">
+			<!--  .pack begin -->
+				<h3>list module(s) installed locally</h3>
+<pre>
+npm list;
+npm ls;
+</pre>
+			<!--  .pack end -->
+			</article>
+			
+			<article class="pack">
+			<!--  .pack begin -->
+				<h3>list module(s) installed globally</h3>
+<pre>
+npm list -g;
+npm ls -g;
+</pre>
+			<!--  .pack end -->
+			</article>
+			
+			<h2>display node_moduels dir locally</h2>
+			<article class="pack">
+			<!--  .pack begin -->
+				<h3>display node_moduels dir locally</h3>
+<pre>
+npm root;
+</pre>
+			<!--  .pack end -->
+			</article>
+			
+			<h2>search for a npm module</h2>
+			<article class="pack">
+			<!--  .pack begin -->
+				<h3>npm search &lt;module_name&gt;</h3>
+<pre>
+npm search express;
+</pre>
+			<!--  .pack end -->
+			</article>
+			
+			<h2>HELP</h2>
+			<article class="pack">
+			<!--  .pack begin -->
+				<h3>get help</h3>
+<pre>
+npm &lt;cmd&gt; -h           quick help on &lt;cmd&gt;
+npm -l                 display full usage in
+npm faq                commonly asked questi
+npm help &lt;term&gt;        search for help on &lt;term&gt;
+npm help npm           involved overview
+</pre>
+			<!--  .pack end -->
+			</article>
+			
+		<!--  doc-wrap end -->  
+		</div>
+	</body>
+</html>
