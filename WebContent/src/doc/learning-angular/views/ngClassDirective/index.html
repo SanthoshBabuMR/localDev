@@ -1,0 +1,68 @@
+<html ng-app>
+<head>
+	<title>ngClassDirective</title>
+	<style type="text/css">
+	.error {
+		background-color: red;
+	}
+	.warning {
+		background-color: yellow;
+	}
+
+	.selected {
+		background-color: lightgreen;
+	}
+</style>
+</head>
+<body>
+	<h1>ngClassDirective</h1>
+	<h2>Simulate Notification</h2>
+	<div ng-controller='HeaderController'>
+		
+		<div ng-class='{error: isError, warning: isWarning}'>{{messageText}}</div>
+		
+		<button ng-click='showError()'>Simulate Error</button>
+		<button ng-click='showWarning()'>Simulate Warning</button>
+	</div>
+	<script src="../../public/javascripts/lib/angular.js"></script>
+	<script>
+		function HeaderController($scope) {
+			$scope.isError = false;
+			$scope.isWarning = false;
+			$scope.showError = function() {
+				$scope.messageText = 'This is an error!';
+				$scope.isError = true;
+				$scope.isWarning = false;
+			};
+			$scope.showWarning = function() {
+				$scope.messageText = 'Just a warning. Please carry on.';
+				$scope.isWarning = true;
+				$scope.isError = false;
+			};
+		}
+	</script>
+
+	<h2>Restaurant Directory</h2>
+	<table ng-controller='RestaurantTableController'>
+		<tr ng-repeat='restaurant in directory' ng-click='selectRestaurant($index)'
+		ng-class='{selected: $index==selectedRow}'>
+			<td>{{restaurant.name}}</td>
+			<td>{{restaurant.cuisine}}</td>
+		</tr>
+	</table>
+
+	<script type="text/javascript">
+		function RestaurantTableController($scope) {
+			$scope.directory = [
+				{name:'The Handsome Heifer', cuisine:'BBQ'},
+				{name:'Green\'s Green Greens', cuisine:'Salads'},
+				{name:'House of Fine Fish', cuisine:'Seafood'}];
+			
+			$scope.selectRestaurant = function(row) {
+				$scope.selectedRow = row;
+			};
+		}
+</script>
+
+</body>
+</html>
