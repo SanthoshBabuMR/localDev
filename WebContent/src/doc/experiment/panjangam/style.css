@@ -1,0 +1,23 @@
+*,
+*:after,
+*:before {
+	font-family:  arial;
+	line-height: 1.5;
+	box-sizing: border-box;
+}
+body, p, div, span, li {
+	font-size: 13px;
+}
+
+.past-event {
+	color: #999999;
+}
+.future-event {
+	color: #000000;
+}
+.active-event {
+	color: rgb(0,0,200);
+}
+.next-event {
+	color: rgb(0,200,0);
+}
