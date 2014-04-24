@@ -6,5 +6,6 @@ require.config({
 
 		// require modules
 		"helloWorld": "modules/helloWorld"
-	}
+	},
+	scriptType: "text/javascript"
 })
