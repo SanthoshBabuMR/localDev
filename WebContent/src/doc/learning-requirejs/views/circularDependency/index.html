@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>circular Dependency</title>
+</head>
+<body>
+	<script src="/public/scripts/lib/require.js"></script>
+	<script>
+		require( ["/public/scripts/config/configCircularDependency.js"], function( ) {
+			require( ["circularDependency"] );
+		})
+	</script>
+</body>
+</html>

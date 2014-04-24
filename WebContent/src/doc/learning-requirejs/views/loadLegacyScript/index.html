@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Loading non-AMD Modules</title>
+</head>
+<body>
+	<script src="/public/scripts/lib/require.js"></script>
+	<script>
+		require( ["/public/scripts/config/configLoadLegacyScript.js"], function( ) {
+			require( ["loadLegacyScript"] );
+		})
+	</script>
+</body>
+</html>

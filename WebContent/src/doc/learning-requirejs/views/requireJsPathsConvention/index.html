@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>requireJs Paths Convention</title>
+</head>
+<body>
+	<script src="/public/scripts/lib/require.js"></script>
+	<script>
+		require( ["/public/scripts/config/configRequireJsPathsConvention.js"], function( ) {
+			require( ["requireJsPathsConvention"] );
+		})
+	</script>
+</body>
+</html>

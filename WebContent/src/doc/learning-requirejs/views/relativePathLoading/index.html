@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>relative Path Loading</title>
+</head>
+<body>
+	<script src="/public/scripts/lib/require.js"></script>
+	<script>
+		require( ["/public/scripts/config/configRelativePathLoading.js"], function( ) {
+			require( ["relativePathLoading"] );
+		})
+	</script>
+</body>
+</html>
