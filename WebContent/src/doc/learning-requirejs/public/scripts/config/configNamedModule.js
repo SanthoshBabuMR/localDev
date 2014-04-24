@@ -4,7 +4,10 @@ require.config({
 		// lib
 		"jquery": "lib/jquery-2.1.0",
 
+		// define modules
+		"dataType": "modules/dataType",
+		
 		// require modules
-		"helloWorld": "modules/helloWorld"
+		"namedModule": "modules/namedModule"
 	}
 })
