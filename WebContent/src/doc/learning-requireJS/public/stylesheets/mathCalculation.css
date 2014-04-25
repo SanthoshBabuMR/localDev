@@ -1,0 +1,29 @@
+.grid {
+	width: 210px;
+	border: 1px solid rgba(0,0,0,0.8);
+}
+.grid > [class^="block-"] {
+	padding: 5px 8px;
+	margin: 5px 8px;
+	display: inline-block;
+	text-align: center;
+	font-size: 16px;
+	border-bottom: 1px solid rgba(0,0,0,.2);
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.grid .block-c {
+	width: 50px;
+}
+.grid .block-b {
+	width: 80px;
+}
+#calcOutput {
+	height: 30px;
+	width: 194px;
+	display:  inline-block;
+	line-height: 30px;
+	border: 1px solid rgba(0,0,0,0.8);
+	cursor: text;
+	padding: 5px 8px;
+}
